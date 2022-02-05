@@ -1,4 +1,3 @@
-import axe from 'axe-core';
 import React, { useCallback, useMemo, useState } from 'react';
 import { useQuery } from 'react-query';
 import SpeechRecognition, {
@@ -40,12 +39,12 @@ export const SignIn = () => {
   );
 
   const runAudit = useCallback(() => {
-    axe.run(document).then((results) => {
-      if (results.violations.length) {
-        console.error('Accessibility issues found');
-        console.log(results.violations);
-      }
-    });
+    // axe.run(document).then((results) => {
+    //   if (results.violations.length) {
+    //     console.error('Accessibility issues found');
+    //     console.log(results.violations);
+    //   }
+    // });
   }, []);
 
   if (!browserSupportsSpeechRecognition) {
