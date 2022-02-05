@@ -38,15 +38,6 @@ export const SignIn = () => {
     [setUsernameKey, username]
   );
 
-  const runAudit = useCallback(() => {
-    // axe.run(document).then((results) => {
-    //   if (results.violations.length) {
-    //     console.error('Accessibility issues found');
-    //     console.log(results.violations);
-    //   }
-    // });
-  }, []);
-
   if (!browserSupportsSpeechRecognition) {
     return <span>Browser doesn't support speech recognition.</span>;
   }
@@ -93,9 +84,6 @@ export const SignIn = () => {
                     </div>
                   </div>
                 )}
-              </div>
-              <div>
-                <Button onClick={runAudit}>Run audit</Button>
               </div>
               <div>
                 <Posts />

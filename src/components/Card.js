@@ -9,7 +9,7 @@ export const Card = ({ children, title, image, content, ...props }) => (
       <div className="px-6 py-4 ">{children}</div>
     ) : (
       <>
-        {!!image && <img className="w-full" src={image} alt={title} />}
+        {!!image && <img className="w-full" src={image} />}
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{title}</div>
           <p className="text-base text-gray-700">{content}</p>
