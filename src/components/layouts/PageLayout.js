@@ -39,6 +39,10 @@ const useStyles = createUseStyles({
     '& main .rounded': {
       border: '1px solid white',
     },
+
+    '& main .text-base': {
+      color: 'white',
+    },
   },
 });
 
