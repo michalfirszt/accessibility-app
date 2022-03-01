@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { ChannelLayout, PageLayout } from '../components/layouts';
 import {
   ChannelPreview,
+  List,
   PostPreview,
   Posts,
   ProductPreview,
@@ -16,7 +17,8 @@ const BlankPage = () => <div />;
 const AppRoutes = () => (
   <Routes>
     <Route path={paths.root} element={<PageLayout />}>
-      <Route index element={<SignIn />} />
+      <Route index element={<List />} />
+      <Route path={paths.signIn} element={<SignIn />} />
       <Route path={paths.product()} element={<ProductPreview />} />
       <Route path={paths.posts} element={<Posts />} />
       <Route path={paths.post()} element={<PostPreview />} />

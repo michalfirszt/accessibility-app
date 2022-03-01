@@ -1,5 +1,6 @@
 const paths = {
   root: '/',
+  signIn: 'sign-in',
   posts: '/posts',
   post: (postId = null) => (postId ? `/posts/${postId}` : '/posts/:postId'),
   product: (productId = null) =>
