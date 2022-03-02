@@ -3,7 +3,7 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["react-app", "prettier"],
+  "extends": ["react-app", "prettier", "plugin:cypress/recommended"],
   "plugins": ["react", "prettier", "simple-import-sort"],
   "parserOptions": {
     "ecmaVersion": 2018
