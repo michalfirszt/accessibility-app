@@ -5,7 +5,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json -p 4000",
     "init:db": "cp initdb.json db.json",
@@ -32,6 +32,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.9.12",
     "autoprefixer": "^10.4.2",
     "cypress": "^9.5.1",
     "eslint-config-prettier": "^8.3.0",
@@ -44,6 +45,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-testing-library": "^5.0.5",
+    "nyc": "^15.1.0",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.18"
@@ -65,5 +67,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**/*.js"
+    ],
+    "report-dir": "coverage/cypress-coverage",
+    "temp-dir": "coverage/cypress-coverage/.nyc_output"
   }
 }
