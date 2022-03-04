@@ -6,5 +6,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install
+        run: npm install
+      - name: Start
+        run: npm run start
       - name: Cypress run
         uses: cypress-io/github-action@v2
+        with:
+          config-file: cypress.json

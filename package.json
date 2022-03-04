@@ -67,13 +67,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "nyc": {
-    "all": true,
-    "include": [
-      "src/**/*.js"
-    ],
-    "report-dir": "coverage/cypress-coverage",
-    "temp-dir": "coverage/cypress-coverage/.nyc_output"
   }
 }
