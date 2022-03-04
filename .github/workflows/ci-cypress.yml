@@ -8,6 +8,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install
         run: npm install
+      - name: Tests
+        run: npm run test
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
